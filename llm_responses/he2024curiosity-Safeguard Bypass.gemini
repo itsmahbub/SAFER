@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The paper does not explicitly design its fuzzer, CUREFUZZ, to bypass safeguards. The failure oracle is defined by catastrophic events like collisions, and the exploration strategy is guided by novelty ('curiosity'), cumulative reward, and robustness, not by feedback from any safety mechanism. Therefore, the method does not meet the criteria for 'High'. However, in the experimental section for RQ3, the authors demonstrate a form of safeguard bypass. They use the crashes found by their method to fine-tune and 'repair' the ACAS Xu model, creating a hardened or 'safeguarded' version. They then re-run CUREFUZZ on this repaired model and show that it can still find 55 new faults. This constitutes a demonstration of a successful bypass of the 'repair' safeguard, even though the tool was not specifically designed for this objective.",
+  "evidence": "Page 10, Section 'RQ3: Can we use the crash-triggering scenarios found by CUREFUZZ to improve SDMs?': 'In the end, to verify the effectiveness of the repair, we utilize CUREFUZZ again to test the newly fine-tuned SDM. For the repaired ACAS Xu, 55 faults and 4 distinct types of crash-triggering scenarios are detected. We find that the crashes found by CUREFUZZ are reduced by 73% compared with the original DNN model.'"
+}
+```

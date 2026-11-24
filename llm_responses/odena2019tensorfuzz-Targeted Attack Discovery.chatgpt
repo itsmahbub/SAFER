@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The TensorFuzz system explicitly supports arbitrary, user-specified objective functions that are evaluated on model outputs (metadata arrays), and uses coverage-guided mutation to search for inputs satisfying those objectives. This lets a user define a predefined, attacker-chosen goal (expressed as an objective over outputs/metadata) and have the fuzzer steer exploration toward finding inputs that meet that goal. The paper gives multiple concrete examples of user-defined objectives (e.g., finding NaNs, disagreements between quantized and original models, or a loss-high/gradient-near-zero condition), showing the mechanism is general enough to target specific, pre-defined properties.",
+  "evidence": "Page 1 (Abstract): \"In CGF, random mutations of inputs are guided by a coverage metric toward the goal of satisfying user-specified constraints.\"; Page 5 (Section 5, Objective Function): \"The objective function is used to assess whether that state has been reached. ... When the mutated inputs are fed into the computation graph, both coverage arrays and metadata arrays are returned as output. The objective function is applied to the metadata arrays, and flags inputs that caused the objective to be satisfied.\"; Page 7 (Section 6, experiments): \"we wrote an objective that would be satisfied if the loss was high and the gradient was close to zero.\""
+}
+```

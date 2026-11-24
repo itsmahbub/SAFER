@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "TESTRNN’s objective is to find any input within a norm‐ball of a seed that changes the model’s prediction (φ(x') ≠ φ(x)), without specifying a particular target label or predefined harmful output. The exploration is guided by internal coverage conditions, but the ultimate oracle flags any misclassification, making it untargeted exploration rather than steering toward attacker‐chosen outputs or a broader class of unsafe behavior.",
+  "evidence": "Section VI.C (Test Oracle): “A test case x' is said to not pass the oracle if x' is within the norm‐ball of some known sample x … and if x' has a different classification from x, i.e., φ(x) ≠ φ(x').” (page 1198)"
+}
+```

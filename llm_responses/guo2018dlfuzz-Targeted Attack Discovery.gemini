@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper describes DLFuzz as a differential fuzzing framework. Its primary objective is to find inputs that cause a prediction inconsistency between the original and the mutated version. The optimization goal is explicitly designed to guide the input to be misclassified as any of the top-k alternative classes, not a specific, predefined target class chosen by an attacker. The oracle for detecting an error is triggered simply when the new prediction differs from the original prediction, which is a form of untargeted exploration based on prediction deviation.",
+  "evidence": "Page 4, Algorithm 1: The condition for identifying an adversarial example is `if c'!= c then adversarial_set.append(x')`, which defines an error as any change in the predicted class label. \nPage 4, Section 4: The optimization objective is described as: \"The objective consists of two parts. In the first part ∑k i=0 ci − c, c is the original class label of the input, ci(i = 0, ..., k) is one of top k class labels with confidence just lower than c. Maximizing the first part guides the input to cross the decision boundary of the original class and lie in the decision space of top k other classes.\"\nThis shows the fuzzer steers exploration towards a set of alternative classes rather than a single predefined target."
+}
+```

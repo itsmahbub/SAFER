@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper explicitly designs a tunable objective function that can target specific labels and steer the testing/search toward those labels (including user-specified priorities). BET uses that objective to drive perturbation selection and label-focused exploration (and even allocates per-label query budgets), which directly enables discovery of attacker-chosen target outputs (e.g., forcing inputs to be misclassified as a particular label). This matches the metric's definition of supporting targeted attack discovery.",
+  "evidence": "Page 167, Section 3.3 Tunable Objective Function: \"If the objective function targets a specific label, the testing process will be led to enter the decision boundary of this specific label to explore corner cases, i.e., generate error-inducing inputs with the corresponding label.\"; Page 167, Section 3.3 (equation and description for ST): \"The tunable objective function for ST is given in Equation 6. SOF(x) = C(x)[li]. In Equation 6, we only optimize C(x)[li]...\"; Page 167, Section 3.3 (label ordering / user priority): \"we allow users to prioritize labels as they want to support ad-hoc testing cases. For example... users may prioritize finding error-inducing inputs that would be misclassified as managers.\""
+}
+```

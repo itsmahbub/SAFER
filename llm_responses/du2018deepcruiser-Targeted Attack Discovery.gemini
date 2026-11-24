@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The method performs untargeted exploration to find general defects in an Automated Speech Recognition (ASR) system. The objective is to generate audio inputs that are incorrectly transcribed, where incorrectness is defined as a high Word/Character Error Rate (W/CER) compared to the transcription of the original seed audio. The search is guided by increasing coverage of the model's internal states, not by steering the output towards a specific, attacker-chosen target phrase or command. The oracle checks for prediction inconsistency or deviation above a certain threshold, which aligns with the definition of untargeted exploration.",
+  "evidence": "Page 14, Section 6.2, Coverage-Guided Testing: \"If the prediction result is inconsistent with the original seed, a' will be added into the failed tests. For audio in ASR, we decide a failed test by checking whether the Word/Character Error Rate (W/CER) exceeds a certain threshold.\""
+}
+```

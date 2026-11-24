@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper's method, CrossASR++, generates audio inputs from text seeds using a Text-To-Speech (TTS) system. Although it uses a differential oracle where semantic consistency is not strictly required by the metric's definition, the design inherently enforces both semantic consistency and naturalness. A crucial validation step ensures the generated audio is a plausible and semantically correct representation of the source text. This step designates an audio-text pair as a \"valid test case\" only if at least one of the cross-referenced ASR systems can successfully transcribe the audio back to the original text. This process effectively filters out semantically invalid or highly unnatural/distorted audio that no system can recognize. Since each audio input is generated directly from a text seed and then validated, there is no cumulative distortion across iterations, ensuring that realism is controlled relative to the original source.",
+  "evidence": "Page 2, Section II.A, \"The tool cross-references the outputs of these ASR systems and tags the synthesized audio-text pair as a valid test case if at least one of the ASR systems can successfully transcribe the audio (i.e., each word in the transcription matches each corresponding word in the input text). ... We take the audio-text pair as an indeterminable test case if none of them can successfully transcribe the audio.\""
+}
+```

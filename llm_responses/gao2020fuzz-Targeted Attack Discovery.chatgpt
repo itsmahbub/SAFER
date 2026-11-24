@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The Sensei method formulates augmentation as an inner maximization that seeks variants maximizing the model loss (i.e., finding the 'most lossy' or worst-case variants) and uses loss (or coverage) as its fitness/selection criterion. The search objective is to induce high loss / misprediction broadly (prediction deviation) rather than to drive the model to a specific attacker-chosen output or target label. Therefore the exploration is untargeted (aimed at causing prediction deviation), matching the 'Low' fulfillment level.",
+  "evidence": "Page 1150, Section 3.1 (Problem Formulation): \"Definition 1 (Augmentation target). ... find ρ yielding the optimal variant x' ... to optimize: max_{ρ ∈ S} L(θ, t(ρ, x), y) (4)\"; Page 1150, Section 3.2 (An Overview): \"the optimal augmentation module efficiently finds the most potential variation (x') that challenges M the most, replace x with x' and use x' for training\"; Page 1151, Section 3.3.3 (Fitness function): \"f_loss(x') = L(θ, x', y) (5)\" and \"the variant that suffers in more loss by the DNN should be used in the augmented training to make the DNN more robust.\""
+}
+```

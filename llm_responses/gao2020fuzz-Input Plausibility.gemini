@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper's method, SENSEI, is designed to improve robustness against \"natural environmental variations,\" making both semantic consistency and naturalness applicable and critical. The oracle assumes semantic preservation, as augmented data points retain their original labels. The method enforces naturalness by using a specific set of bounded transformations (e.g., rotation, translation, brightness) intended to simulate realistic conditions. Crucially, the method is designed to avoid cumulative distortion across its genetic algorithm iterations. It explicitly states that generated transformations are always applied to the original seed image, rather than to an already mutated version. This prevents the progressive degradation of the input and ensures that all generated variants are plausible perturbations of the original seed, which directly aligns with the criteria for a 'High' rating.",
+  "evidence": "Page 6, Section 3.3.2 Generation of population: \"Furthermore, SENSEI always applies the resulting transformation vector (chromosome) on the original image (as opposed to applying on an already transformed data) to prevent the resulting data from being unrealistic.\" \n\nPage 7, Section 4.2 Generation of Realistic Variations: \"To make sure the translated images are visually similar to natural ones, we restrict the space of allowed perturbations... These image operations preserve the content of original image.\""
+}
+```

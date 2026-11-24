@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "PAPILLON’s design enforces naturalness throughout its fuzzing iterations by generating each mutant via an LLM-driven mutator under system‐prompt constraints that preserve fluency, coherence, and low perplexity. Although semantic consistency (preserving equivalence to the original seed) is not required by PAPILLON’s oracle and thus not applicable, the framework strictly controls “realism” of every mutated prompt—using question‐aware LLM mutations, prompt‐length limits, and verified low perplexity—to ensure all inputs remain plausible within the task domain. This continuous enforcement of naturalness across rounds meets the “High” criterion for Input Plausibility.",
+  "evidence": "Page 2 (Abstract): “We also develop three novel question‐dependent mutation strategies … to generate prompts that maintain semantic coherence while significantly reducing their length.”; Page 9 (Section 4.2, Template Mutation and Optimization): “In PAPILLON, we design three novel question‐dependent mutation strategies capable of generating mutations with semantic meaning and limited token length by leveraging the power of an LLM helper.”; Page 9 (Section 4.2, Maintain semantic coherence): “Ensuring that the generated adversarial prompts are readable (low perplexity) is crucial … we propose using GPT-driven mutation operators to create jailbreaking templates, allowing us to preserve the semantic integrity of the generated templates throughout the mutation process.”"
+}
+```

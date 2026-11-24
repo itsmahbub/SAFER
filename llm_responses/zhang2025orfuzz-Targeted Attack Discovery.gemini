@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The proposed framework, ORFUZZ, steers the fuzzing exploration toward uncovering a broad class of safety-alignment failures known as \"over-refusal\" (i.e., erroneously rejecting benign queries due to overly conservative safety guardrails). It actively optimizes its search toward triggering this specific behavior class, but does not aim to induce a specific attacker-chosen target output or predefined goal beyond the general refusal response.",
+  "evidence": "Page 2, Section I: \"In this work, we address this gap by proposing ORFUZZ, a novel evolutionary fuzzing framework specifically designed to test for and detect over-refusal behaviors in LLMs.\"\n\nPage 8, Section IV-C, 3) Evaluation Process: \"Finally, we calculate the reward r ∈ [0, 1] of each test case: r = (pˆover − pˆtoxic + 1)/2 (9) which reflects the degree of over-refusal behavior. The higher the reward, the more likely the test case is to trigger over-refusal behavior. The rewards are used to update the seed selection and mutator refinement process.\""
+}
+```

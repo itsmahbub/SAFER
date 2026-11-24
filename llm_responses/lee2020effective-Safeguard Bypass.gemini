@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper proposes a white-box testing method, ADAPT, aimed at maximizing neuron coverage and finding adversarial inputs. The evaluation is conducted on standard pre-trained models (LeNet-4, LeNet-5, VGG-19, ResNet-50) without any mention of them being equipped with safeguards or defenses against adversarial attacks (e.g., adversarial training, input detectors). The method's design, which features an adaptive neuron-selection strategy, is optimized to increase internal coverage metrics, not to interact with or bypass any defense mechanism. The failure oracle is misclassification on these undefended models. Therefore, the paper does not demonstrate a safeguard bypass.",
+  "evidence": "Page 7, Section 4.1, Experimental Setup: \"We used two datasets and four neural network models in Table 2, which have been used in prior work [8, 12, 24, 34]. MNIST [17] is a classical dataset of hand-written digits with 10 classes and ImageNet [7] is a huge collection of real-world images with 1,000 class labels. For each dataset, we used two pre-trained models: LeNet-4 and LeNet-5 [17] for MNIST, and VGG-19 [29] and ResNet-50 [13] for ImageNet.\" This section confirms that the target models are standard, pre-trained versions, with no indication of any added safeguards."
+}
+```

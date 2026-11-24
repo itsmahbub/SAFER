@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The method synthesizes test inputs directly into a serialized audio format using Text-to-Speech (TTS) engines. The metric definition explicitly states that generating inputs 'directly in a serialized format (e.g., audio synthesized by TTS engine)' qualifies for a 'High' rating. This process inherently creates stable, reproducible test cases (audio files) that are not subject to information loss or alteration from serialization processes like clipping or rounding, which can affect methods that mutate intermediate representations. The paper confirms that the generated audios are saved as files, ensuring that any discovered failure can be reliably reproduced by re-using the same audio file.",
+  "evidence": "Page 3, Section 2.1 Workflow: 'Then, TTS is used to generate an audio file for each piece of selected text (Line 9).'\n\nPage 2, Section 1 INTRODUCTION: '...employs Text-to-Speech (TTS) engines to synthesize test inputs from a text corpus. Then, it performs black-box differential testing on ASR systems by cross-referencing multiple ASRs to detect different transcriptions.'\n\nPage 3, Section 2.2 Extensibility: 'When inheriting from each class, users need to specify a name in the constructor. This name will be associated with a folder for saving the audio files and transcriptions.'"
+}
+```

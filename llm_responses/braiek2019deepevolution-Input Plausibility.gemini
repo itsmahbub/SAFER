@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper's method, DeepEvolution, explicitly addresses both semantic consistency and naturalness, which are applicable due to its use of a metamorphic testing oracle and its goal of finding realistic corner-case behaviors. Semantic consistency is enforced by computing the Structural Similarity Index (SSIM) between each generated input and its original seed input, rejecting transformations that result in a low similarity score. This direct comparison to the original seed prevents the cumulative distortion across iterations that is a key concern of the metric. Naturalness is enforced by manually tuning transformation parameters to realistic ranges and adopting a conservative strategy that limits complex transformations to avoid generating \"meaningless images, i.e., images that don't occur in real-world situations.\"",
+  "evidence": "Page 2, Section IV.A: \"To verify that generated inputs remain semantically equivalent to the original inputs, we compute a Structural Similarity Index (SSIM) [8] which assesses the similarity between two images... We opted for this conservative strategy that consists of applying only one affine transformation following the pixel-value transformations because applying multiple affine transformations at once would increase the chances of generating meaningless images, i.e., images that don't occur in real-world situations.\""
+}
+```

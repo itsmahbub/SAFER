@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper introduces DeepHunter, a fuzzing framework designed to find defects in a single Deep Neural Network (DNN) model. The test oracles used to identify failures, such as the metamorphic testing oracle (Definition 2) and the quantization error oracle (Definition 3), are defined relative to a single target DNN or a comparison between a DNN and its quantized version. The experimental evaluation is conducted on several models, but each fuzzer is run against each model independently to measure defect discovery for that specific model. The paper does not include any analysis or experiments to check if the fault-inducing inputs discovered for one model are transferable and can cause failures in other, independently trained models. The authors explicitly state that their approach is distinct from multi-model differential testing and is focused on a single model.",
+  "evidence": "Page 11, Section 6 RELATED WORK, quote: \"Different from DeepXplore and DiffChaser which focus on differential testing, DeepHunter is a grey-box testing technique focusing on a single DNN model.\""
+}
+```

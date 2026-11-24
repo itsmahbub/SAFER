@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper mutates images in the native pixel-value domain and explicitly enforces constraints tied to standard serialized image ranges (it uses thresholds expressed in terms of 255 and L∞/L0 checks) to ensure generated mutants remain within valid image-value bounds. The metamorphic mutation algorithm explicitly computes and checks L0 and L∞ against bounds based on 255 (and uses tuned α/β parameters) before accepting a mutant, and the user study demonstrates the approach produces a high validity ratio. These design choices indicate DeepHunter enforces input-format constraints relevant to images (pixel-range constraints) so perturbations are applied in the same numerical space as serialized images and are likely to survive serialization.",
+  "evidence": "Page 6, Section 3.2.2 Metamorphic Mutation: \"If an image s' is mutated from s by a pixel value transformation, then s' is valid if f(s,s') is satisfied. f(s,s') = [ L∞(s,s') ≤ 255, if L0(s,s') < α × size(s) ; L∞(s,s') < β × 255, otherwise ]\"; Page 6, Section 3.2.3 Metamorphic Mutation Algorithm (Alg. 2): \"DeepHunter computes L0 and L∞ between the reference image s0 and the new mutant s' to check whether s' is meaningful (Line 12).\"; Page 7, User Study Settings: \"For DeepHunter, we set α = 0.02 and β = 0.2 for Eq. 1.\"; Page 8, RQ1 Results / Table 2: \"DeepHunter 60 (1.2%) [MNIST], 145 (2.9%) [CIFAR-10], 40 (0.8%) [ImageNet]\" (showing low invalidity rates for DeepHunter's constrained pixel-value mutations)."
+}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper does not perform a post-hoc transferability evaluation in which fault-inducing inputs discovered on one model are applied to a separate, independently trained model. Instead, it embeds a differential oracle between a full-precision model and its quantized variant directly into the fuzzing loop (i.e. it seeks inputs that make the two versions disagree), which the metric guidance explicitly excludes as cross-model transferability. There is no experiment where inputs found on model A are reused against an unseen target model B to demonstrate transferable failures.",
+  "evidence": "Page 7, Section 6 (“TensorFuzz surfaces disagreements between models and their quantized versions”): the fuzzing objective is defined as causing disagreement between the 32-bit and 16-bit versions of the same trained network, and no separate post-hoc transfer test on an independent model is reported."
+}
+```

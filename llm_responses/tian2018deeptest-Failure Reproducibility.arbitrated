@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "DeepTest applies continuous, in-memory image transformations (e.g., adding/subtracting brightness β, scaling contrast α, applying affine and convolutional filters) using OpenCV and Photoshop filters, but never discusses enforcing the discrete, serialized image‐format constraints (clipping mutated pixel values to [0,255], rounding to integer precision, or writing to standard formats like PNG/JPEG). There is no mention of converting mutated tensors back to a serialized image or verifying that the fault‐inducing perturbations survive typical file encoding. This omission means DeepTest does not address failure reproducibility under realistic serialization, fitting the 'Low' category.",
+  "evidence": "Page 5, Section 3.2: “Adjusting brightness and contrast are both linear transformations… by adding/subtracting a constant parameter β… by multiplying each pixel’s value by a constant parameter α.”\nPage 6, Section 4: “Image transformations… We use OpenCV to implement these transformations.”\n\nNowhere in Sections 3 or 4 does the paper mention clipping pixel values to [0,255], rounding to integer precision, or exporting to standard image formats to ensure perturbations survive serialization."
+}
+```

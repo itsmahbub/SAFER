@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper focuses on robustness testing of Automatic Speech Recognition (ASR) systems by identifying transcription errors. The proposed method, ASDF, uses differential testing and text transformations to generate audio that ASR systems fail to transcribe correctly. The paper does not mention any safeguards (e.g., adversarial training, input detectors) being present in the target ASR systems (DeepSpeech, wav2letter, wav2vec2). The failure oracle is defined based on incorrect transcription, not on bypassing a safety or security mechanism. Therefore, the method is not designed to discover safeguard bypasses, and no such bypasses are demonstrated.",
+  "evidence": "Page 2, Section IV: 'A failed test case is defined as a specific text output from an individual ASR service that does not match its corresponding input text.' This quote defines a failure as a simple transcription error, which relates to the system's correctness or robustness, not the bypass of a safeguard. The paper's overall goal is to uncover these transcription errors, as stated in the abstract: 'uncover more errors in ASR systems, and (2) a phonetic analysis module to identify phonemes that the ASR systems tend to transcribe incorrectly.'"
+}
+```

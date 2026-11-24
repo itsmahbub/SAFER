@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The method, SENSEI, uses a genetic search to find input variants for data augmentation. The objective of this search is to find the variant that maximizes the model's loss function with respect to the original, correct label. This approach aims to find any input perturbation that causes a misclassification or prediction deviation, making it an untargeted exploration. The goal is not to steer the model towards a specific, attacker-chosen output (High) or a broad class of security-violating behavior (Medium), but rather to find any variant that 'challenges' the model by inducing a high-loss prediction. This aligns directly with the definition of untargeted exploration.",
+  "evidence": "Page 6, Section 3.3.3 Fitness function: \"In SENSEI, we define the fitness function based on the empirical loss of the DNN. More specifically, since the training of DNN focuses on minimizing loss across the entire training data-set, the variant that suffers in more loss by the DNN should be used in the augmented training to make the DNN more robust. Formally: floss(x') = L(θ, x', y)\""
+}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper's method, semSensFuzz, aims to find general \"inconsistencies\" in perception systems. It applies semantic mutations (e.g., adding a car, changing an object's color) to an input image and its corresponding ground-truth interpretation. The objective is to find mutations that cause a drop in the system's performance score (pixel-level classification accuracy) when compared against the new, mutated ground truth. This approach seeks to induce any prediction deviation or inconsistency, rather than steering the exploration toward a specific, predefined attacker-chosen misclassification (High) or a broader class of safety-violating behaviors (Medium). The evaluation explicitly measures success as a \"percentage point (p.p.) difference\" in performance, which aligns with untargeted exploration for prediction deviation.",
+  "evidence": "Page 10, Section 6.3 Metrics, \"We evaluate the performance of the mutation strategies by calculating the percentage point (p.p.) difference between the SUT's score on the original image and its score on the mutated image. Any drop in the SUT's score on the mutated image compared to the original image was induced directly by the mutation itself, allowing us to gauge the strength of the mutations to find inconsistencies. More formally, for a given SUT Percep, test case (r, interp), and corresponding mutation (r', interp'), the drop is given by drop = eval(Percep(r), interp) – eval(Percep(r'), interp')\""
+}
+```

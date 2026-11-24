@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "QATest searches for discrepancies between a QA system's outputs on semantically equivalent inputs (i.e., it flags a test when the model's prediction for a transformed question differs from the original). The framework's guidance (N-Gram coverage, perplexity priority) and seed selection steer exploration toward diverse and authentic inputs, not toward attacker-chosen target outputs or specific predefined malicious goals. The paper defines a bug as M(q') ≠ M(q) (untargeted deviation) and provides no mechanism or oracle that directs the fuzzer to induce particular attacker-selected outputs or labels.",
+  "evidence": "Page 4, Section 3.2.1 Test Oracle: \"A mutant q' ∈ T(q) is regarded as a bug case of M if M(q') , M(q).\"; Page 5, Section 3.2 (overview of transformations): \"we implement three textual semantically consistent transformations... q' has the same intent and meaning as q. Therefore, the QA system should output the same answer for the q and q'.\"; Page 6, Section 3.3 (Guidance Criteria Design): descriptions of N-Gram coverage and Perplexity Priority (e.g., \"N-Gram coverage... select the particular question that can increase the richness of the seed set\" and \"perplexity priority... ensure that the generated test questions have good authenticity and rationality\") — these criteria guide diversity/authenticity rather than steering to attacker-chosen target outputs."
+}
+```

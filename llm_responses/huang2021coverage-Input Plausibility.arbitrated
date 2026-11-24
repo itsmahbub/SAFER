@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "TESTRNN applies semantic-preserving, domain-specific mutations (e.g., EDA operations for text, SMILES enumeration for molecules) and small Gaussian noise for images/videos, ensuring each individual mutation yields realistic inputs. However, it does not constrain cumulative drift relative to the original seed across multiple iterations. Mutations are applied to the most recent mutant and there is no mechanism to enforce a global similarity bound to the original input when generating further mutants. Thus, semantic consistency and naturalness are maintained per step but not explicitly preserved across the whole fuzzing chain, matching the “Medium” level.",
+  "evidence": "Page 1197 (Algorithm 1): mutations are applied to x selected from T and orig[x'] is set to orig[x], with no per‐iteration bound to the original seed; Page 1199 (Section VII-A.3, Input Mutation): “This ensures the mutated text paragraphs are always valid… The text meanings are reserved in all mutations.”; Page 1199 (Section VII-A.3, Lipophilicity): “mutants that change the SMILES string without affecting the molecular structure”; Page 1197 (Section VI-B.1, Random Mutation): “Gaussian noises with fixed mean and variance are added to the input.”; Page 1198 (Section VI-C.1, Oracle): the oracle labels adversarial samples by checking ||orig(x) – x′|| ≤ roracle but does not prevent generating inputs beyond that bound."
+}
+```

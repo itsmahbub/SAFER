@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper's method, BET, is designed and evaluated for finding error-inducing inputs on standard, undefended CNN models. The experimental setup details the use of standard trained or pre-trained models (VGG, ResNet) without any mention of them being equipped with security safeguards like adversarial training or input detectors. The core methodology focuses on exploiting the general structure of convolutional kernels to efficiently find misclassifications, not on bypassing any specific defense mechanism. While the paper demonstrates that the inputs found by BET can be used to subsequently improve model accuracy through fine-tuning (a form of model hardening), the testing process itself does not target or demonstrate the bypass of an existing safeguard.",
+  "evidence": "Page 7, Section 4.1, \"Experimental Setup\": The description of the models used for evaluation does not mention any safeguards. For instance: \"We train target CNN models with two widely used structures, i.e., VGG16 [37] and ResNet18 [14].\" and \"We use two widely used pretrained models from keras, i.e., VGG19 [37] and ResNet50 [14] as our target CNNs.\" These are standard, undefended architectures."
+}
+```

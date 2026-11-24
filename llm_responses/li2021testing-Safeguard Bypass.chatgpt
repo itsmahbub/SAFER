@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper does not design its failure oracle, mutation, or exploration to target safeguards (e.g., adversarially trained models or adversarial-input detectors), nor does it evaluate whether its generated inputs bypass any protections. All experiments are performed on standard open-source models without defenses, and the authors explicitly describe using the discovered conditions to enable future adversarial training rather than to test or bypass existing safeguards.",
+  "evidence": "Page 3, Section 3.3 (Discussion / Workflow): \"...besides testing, the critical environmental conditions of TACTIC can also be used to synthesise more training examples to improve the performance of DNN-based ADSs by adversarial training (Pei et al., 2017; Tian et al., 2018), which we plan to study in future work.\" \n\nPage 7, Section 4.1 (Datasets and DNN-based ADSs): \"To demonstrate the effectiveness of TACTIC, we consider three popular pre-trained DNN-based ADSs, which have been widely used in previous work ... i.e., Dave-orig (0bserver07, 2016), Dave-dropout (Navoshta, 2016), and Chauffeur (Emef, 2016).\" \n\n(These passages show the paper evaluates on standard pre-trained models and states adversarial training as future work, with no mention of testing against defended/safeguarded models or incorporating safeguards into the oracle or search.)"
+}
+```

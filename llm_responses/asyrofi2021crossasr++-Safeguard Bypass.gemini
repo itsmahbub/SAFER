@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper presents CrossASR++, a differential testing framework for finding correctness failures (incorrect transcriptions) in Automatic Speech Recognition (ASR) systems. The methodology does not target or evaluate any safeguards, safety-aligned models, or adversarial input detectors. The failure oracle is defined by comparing the transcription of a system under test (SUT) against the original text and the transcriptions from other ASR systems; it is not designed to check for the bypass of a protection mechanism. The paper provides no evidence that the target ASR systems (DeepSpeech, DeepSpeech2, Wit, etc.) are equipped with such safeguards, and consequently, it does not demonstrate any safeguard bypasses. The entire focus is on finding functional inconsistencies revealed through differential testing.",
+  "evidence": "Page 3, Section 2.1 Workflow: The definition of a failed test case is based on correctness disagreement, not on bypassing a safeguard. \"2) If the SUT fails to recognize the audio file successfully, but at least one of the other ASR systems succeeds, we take this audio file (and the corresponding input text) as a failed test case for the SUT.\""
+}
+```

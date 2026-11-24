@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The KuK fuzzer’s objectives are defined in terms of general misclassification (x is an AE) combined with uncertainty‐pattern constraints (PCS and VRO thresholds), rather than any attacker‐chosen specific output (e.g. a particular target label or functionality). In other words, KuK seeks any input that causes the model’s prediction to change (an untargeted fault), steering towards prediction deviation under certain uncertainty metrics but not towards a predefined target label or narrowly defined failure class.",
+  "evidence": "Section 4 (Uncommon Data Generation), fitness for HL adversarial examples: “To generate AEs which belong to the HL type, the objective is set as: PCS(x, M) > p ∧ VRO(x, M) < v ∧ x is an AE…,” where “x is an AE” is defined simply as LM(x) ≠ LM(x′) (Definition 3, untargeted misclassification). Nowhere does the approach require or guide towards a specific attacker‐chosen target label or functionality."
+}
+```

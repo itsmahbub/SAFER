@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "DeepHunter applies mutations directly to raw pixel values (e.g., brightness, contrast, affine transforms) and enforces semantic constraints by bounding the number and magnitude of changed pixels (via L₀ and L∞ thresholds). However, the paper does not describe any explicit clipping or rounding step to guarantee that mutated pixel values lie within the serialized image format’s integer range [0,255]. Because it operates in the same numerical space as serialized images but only partially enforces format constraints (it limits change size rather than enforcing final value bounds and integer precision), it aligns with the “Medium” level of Failure Reproducibility.",
+  "evidence": "Page 6, Section 3.2.2: “Suppose an image s′ is mutated from s by a pixel value transformation, then s′ is valid if f(s, s′) is satisfied. f(s, s′) = { L∞(s, s′) ≤ 255, if L₀(s, s′) < α×size(s); L∞(s, s′) < β×255, otherwise }”  \nNo step is described that clips the final pixel values to [0,255] or rounds floats to integer precision before serialization."
+}
+```

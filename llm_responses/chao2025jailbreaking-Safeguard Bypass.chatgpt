@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The paper empirically demonstrates that PAIR-generated prompts can bypass real defenses (i.e., produce nonzero jailbreak rates when attacked prompts are run through SmoothLLM and a perplexity filter). However, PAIR was not specifically designed to target or incorporate feedback from these safeguards as part of its failure oracle or mutation strategy; the defenses were applied statically after generating prompts for an undefended model. Thus PAIR demonstrates successful safeguard bypasses but was not explicitly engineered to exploit or use safeguard outputs during search.",
+  "evidence": "Page 26, Section IV-D (Selecting the JUDGE function): \"For this reason, we use Llama Guard as the JUDGE with the prompt from [32]. ... As Llama Guard is open-source, this choice for the JUDGE renders our experiments completely reproducible.\"; Page 31, Section IV-C (Defended performance of PAIR): \"In Table VIII, we evaluate the performance of PAIR against two jailbreaking defenses: SmoothLLM [20] and a perplexity filter [37, 38]. ... Both defenses are evaluated statically, meaning that PAIR obtains prompts by attacking an undefended LLM, and then passes these prompts to a defended LLM. Notably, as shown in red, the JB% of PAIR drops significantly less than GCG when defended by these two defenses, meaning that PAIR is significantly harder to defend against than GCG.\"; Page 31, Table VIII (excerpt): \"PAIR None Vicuna JB% 88%; PAIR SmoothLLM 39 (↓ 56%); PAIR Perplexity filter 81 (↓ 8%)\"."
+}
+```

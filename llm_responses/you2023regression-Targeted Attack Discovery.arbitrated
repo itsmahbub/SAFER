@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "DRFuzz explicitly guides its fuzzing toward a predefined class of failures—regression faults—by maximizing the prediction difference between the prior and updated models. While it does not aim for a single attacker-chosen target label (which would be “High”), it does target a specific failure class (any input where M1 is correct and M2 is incorrect), distinguishing it from purely untargeted deviation testing (“Low”). This aligns with “Medium”: steering exploration toward a broader, predefined class of safety- or security-violating behavior (regression faults) rather than arbitrary inconsistency.",
+  "evidence": "Section II (Definition 2): “x is called to trigger a regression fault if x is correctly predicted by M1, yet wrongly predicted by M2…we denote x as the regression fault triggering input and the faulty behavior triggered by x as (cM1[x] → cM2[x]).”; Section III-C: “we design a search strategy in DRFuzz to guide the generation of test inputs toward the direction of amplifying the prediction difference between versions.”"
+}
+```

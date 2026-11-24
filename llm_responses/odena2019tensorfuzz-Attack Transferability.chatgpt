@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper explicitly designs the fuzzer to use one model's activations as the coverage signal (i.e., feedback from a surrogate) while checking an objective that compares that model's outputs to a separate quantized model, and it demonstrates that inputs discovered in this way transfer to cause disagreements in the other model (70% of tested examples). This matches the criterion of incorporating explicit mechanisms to support discovery of transferable failures and demonstrating cross-model transferability.",
+  "evidence": "Page 5-6, Section 5 (Coverage Analyzer): \"One way to achieve this is to use an ANN algorithm... When we get a new activation vector, we can look up its nearest neighbor, then check how far away the nearest neighbor is in Euclidean distance and add the input to the corpus if the distance is greater than some amount L.\"; Page 7, Section 6 (TensorFuzz surfaces disagreements between models and their quantized versions): \"We then ran the fuzzer with mutations restricted to lie in a radius 0.4 infinity norm ball surrounding the seed images, using the activations of only the 32-bit model as coverage... With these settings, the fuzzer was able to generate disagreements for 70% of the examples we tried.\""
+}
+```

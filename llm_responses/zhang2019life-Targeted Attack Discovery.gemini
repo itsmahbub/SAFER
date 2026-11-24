@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The fuzzing tool proposed in the paper, LipFuzzer, performs untargeted exploration by mutating seed voice command templates to generate variations (LAPSUS) and find semantic inconsistencies. The goal is simply to find inputs that cause prediction deviation (i.e., where the voice assistant incorrectly interprets the command), rather than steering the exploration to induce a specific, attacker-chosen target intent or output.",
+  "evidence": "Page 9, Section IV.C Verification: \"We define that a LAPSUS is verified to be effective when it is incorrectly interpreted by the VA system. For example, if the vApp is not installed after an installation-related LAPSUS is played to VA devices, then this LAPSUS is effective.\""
+}
+```

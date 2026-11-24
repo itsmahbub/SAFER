@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The paper applies input‐format constraint enforcement in some but not all cases. For MNIST images the authors add Gaussian noise and then “round off the decimals around 0 and 1 to make the pixel value stay within the value range,” and for discrete inputs (IMDB text and SMILES strings) they use domain‐specific toolkits to ensure mutated inputs remain valid. However, for the UCF101 video model they only state that Gaussian noise is added to raw frames without any mention of clipping, rounding to integer pixel values, or writing back to standard video formats. The lack of explicit, end‐to‐end enforcement of serialization constraints for continuous video inputs indicates only partial coverage of format constraints, matching the “Medium” rating.",
+  "evidence": "VII-A.3 Input Mutation (page 1199):\n– MNIST images: “add Gaussian noise to input image and round off the decimals around 0 and 1 to make the pixel value stay within the value range.”\n– IMDB text: “we take a set M of mutants from the EDA toolkit... This ensures the mutated text paragraphs are always valid.”\n– Lipophilicity SMILES: “we take a set M of mutants that change the SMILES string without affecting the molecular structure... The enumerated SMILES strings are the test cases.”\n– UCF101 video: “we add Gaussian noise to the original video frames” (no clipping/rounding or serialization step described)."
+}
+```

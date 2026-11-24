@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The paper proposes a coverage-guided 'Jailbreak Case Generation' application that steers the exploration toward a broad class of security-violating behaviors, specifically jailbreak attacks. It generates new queries by rewriting prompt seeds and selects those that yield the highest coverage increase to iteratively find 'successful jailbreak queries.' This targets a general failure class (unsafe or malicious outputs) rather than steering the model toward a specific, predefined attacker-chosen response or objective.",
+  "evidence": "Page 11, Section V.C Jailbreak Case Generation, \"Setup: We use Llama-2-7b-chat as the target model, initializing with five jailbreak queries as seeds. Over five iterations, GPT-4 generates ten new jailbreak queries per round through prompt rewriting. The query with the highest coverage increase is selected as the next seed in the coverage-guided approach. For comparison, a random strategy selects seeds randomly from rewritten candidates... As shown in Figure 6, the coverage-guided method outperforms the random strategy in generating successful jailbreak queries.\""
+}
+```

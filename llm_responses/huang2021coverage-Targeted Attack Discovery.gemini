@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper's method, TESTRNN, defines a defect or an adversarial sample as any input that causes the model to produce a different output compared to the original seed input, as long as the input is within a certain distance (norm-ball) from the seed. The test oracle's objective is to find any prediction deviation (`φ(x) ≠ φ(x')`), which is an untargeted exploration strategy. The search is not guided toward a specific, predefined target label (e.g., class '7') or a broader class of safety violations (e.g., toxicity). It simply seeks any misclassification.",
+  "evidence": "Page 8, Section VI-C, 1) Test Oracle: \"A test case x' is said to not pass the oracle if x' is within the norm-ball of some known sample x, i.e., ||x − x'||2 ≤ roracle, and if x' has a different classification from x, i.e., φ(x) ≠ φ(x').\" This condition is also formally stated in Algorithm 1 on page 7, line 9."
+}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper introduces DeepTest, a method for automatically testing DNN-driven autonomous cars by generating synthetic images representing realistic driving conditions (e.g., rain, fog, different lighting). The failure oracle is based on metamorphic relations, which check for unexpected changes in the DNN's output (steering angle) when the input image is transformed. The DNN models under test (Chauffeur, Rambo, Epoch) are standard models from the Udacity self-driving car challenge and are not described as having any safeguards like adversarial training or input sanitizers. The paper's methodology is designed to find general corner-case failures by maximizing neuron coverage, not to specifically target or bypass any defensive mechanisms. Consequently, the paper does not demonstrate a safeguard bypass.",
+  "evidence": "Page 6, Section 4, \"Autonomous driving DNNs\": \"We evaluate our techniques on three DNN models that won top positions in the Udacity self-driving challenge [15]: Rambo [13] (2nd rank), Chauffeur [8] (3rd rank), and Epoch [10] (6th rank). We choose these three models as their implementations are based on the Keras framework [34] that our current prototype of DeepTest supports.\" This section details the models but makes no mention of any safeguards being implemented. The entire testing framework, as described in Section 3 \"METHODOLOGY\", is focused on generating inputs to increase neuron coverage and checking for violations of metamorphic relations, rather than bypassing defenses."
+}
+```

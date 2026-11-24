@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "TensorFuzz exposes a user-specified objective function that precisely defines the failure condition of interest (e.g. inputs causing NaNs, quantization disagreements, or a specific high-loss/low-gradient state). The fuzzer then explicitly steers its coverage-guided mutations to satisfy that exact, predefined objective. This fulfills the ‘High’ level by allowing an attacker (or tester) to choose a concrete target property and have the system focus exploration toward inputs that realize that property.",
+  "evidence": "Page 1 (Abstract): “In CGF, random mutations of inputs are guided by a coverage metric toward the goal of satisfying user-specified constraints.”; Page 5 (Section 5, Objective Function): “The objective function is applied to the metadata arrays, and flags inputs that caused the objective to be satisfied.”; Page 7 (Section 6): “we wrote an objective that would be satisfied if the loss was high and the gradient was close to zero.”"
+}
+```

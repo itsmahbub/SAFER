@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper explicitly designs a coverage-guided generation strategy whose objective is to find jailbreak (safeguard-bypass) examples and demonstrates that this strategy produces substantially more successful jailbreaks than a random baseline. The method encodes bypass discovery into its exploration (coverage gain as selection criterion) and empirically shows successful safeguard bypasses across iterations and models.",
+  "evidence": "Abstract (p.730): \"...we introduce a coverage-guided approach for generating jailbreak attack examples, enabling systematic refinement of prompts to uncover vulnerabilities.\"; Section V.C 'Jailbreak Case Generation' (p.739): \"By utilizing coverage to guide the creation of attack examples, Jailbreak Case Generation method identifies areas of the model that remain unexplored. Iterative refinement of prompts based on coverage gains ensures that the generated cases are effective in exposing vulnerabilities while promoting diversity among test cases.\"; Section V.C evaluation (p.740): \"As shown in Figure 6, the coverage-guided method outperforms the random strategy in generating successful jailbreak queries. In Round 1, our approach generates 6 successful queries compared to 2 by the random method. This gap widens in subsequent rounds, with our method producing 11, 19, 24, and 32 successful queries in Rounds 2 to 5, respectively, while the random strategy yields 2, 6, 9, and 12.\""
+}
+```

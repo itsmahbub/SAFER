@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The Adapt technique is explicitly formulated to maximize coverage (Cov) by selecting neurons whose gradients increase internal activation coverage and adding inputs that expand coverage. Its search objective and oracle are coverage-driven (and it reports untargeted adversarial/misclassification findings), rather than steering exploration toward attacker-chosen specific outputs (e.g., a particular target label or a chosen malicious behavior). Therefore it performs untargeted exploration focused on prediction deviation / coverage, not targeted attack discovery.",
+  "evidence": "Page 4, Section 2.3 (White-Box Testing of Neural Networks): \"The objective of testing is to find a set of input vectors T = {I1, . . . , In } that collectively maximize the coverage:\"; Page 4, Algorithm 1 (White-box Testing for Neural Networks): \"if Cov(O') ⊈ C ∧ Constraint(I, I') then W ← W ∪ {I'} C ← C ∪ Cov(O')\" (showing inputs are accepted based on increasing coverage); Page 9, Section 4.3 (Adversarial Inputs): \"Table 3 reports the average number of mutations per image (Mutations), the average number of adversarial inputs found per image (Adv. Inputs), the total number of incorrectly classified labels (Labels), and the number of initial inputs (Seeds) from which adversarial inputs were found.\" (the paper measures untargeted adversarial/misclassification results but does not define or pursue attacker-chosen target outputs)."
+}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "LipFuzzer empirically demonstrates that generated voice-command variants can cause the VA platforms’ intent classifiers to route users to unintended or malicious vApps, including on platforms that employ fuzzy matching to tolerate minor speech errors. This constitutes a demonstrated failure of a protective intent-handling mechanism. However, the fuzzer is designed to find semantic inconsistencies caused by plausible linguistic slips, not specifically to evade fuzzy matching or another deployed safeguard: its mutation/exploration guidance comes from LAPSUS linguistic Bayesian models and their probabilities, rather than feedback from the fuzzy-matching safeguard or an oracle explicitly encoding bypass of that feature. Thus, it demonstrates safeguard-bypass outcomes without specifically designing its oracle, mutation, or exploration strategy around bypassing the safeguard.",
+  "evidence": "p.4, Section II-A, “Fuzzy Matching”: “Another important feature enabled in NLU is the fuzzy matching of users’ intent. It can tolerate minor LAPSUS.” p.9, Section IV-C, “Verification”: “We define that a LAPSUS is verified to be effective when it is incorrectly interpreted by the VA system.” pp.12–13, Section VI-C and Table IV: sampled real-device verification reports 715 Amazon Alexa vApps (71.5%) and 59 Google Assistant vApps (29.5%) as vulnerable. p.13–14, Section VI-D: the authors used LipFuzzer-generated LAPSUS to create malicious vApps, and “a total number of 3 malicious vApps are invoked.”"
+}
+```

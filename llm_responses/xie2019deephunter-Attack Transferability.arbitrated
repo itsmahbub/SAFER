@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "Although DeepHunter is not explicitly designed with surrogate‐based guidance to discover transferable failures across independently trained models, the paper does demonstrate cross‐model transferability by applying fault‐inducing inputs generated on the original 32‐bit network to its quantized variants and measuring the resulting discrepancies (RQ4, Table 6). This meets the criterion for “Medium”: it shows empirical transferability of discovered failures without incorporating explicit design choices for transferable‐attack discovery.",
+  "evidence": "Experiments on Quantization Error Detection (Section 4.3, p. 7) and RQ4 results (Table 6, p. 10/154): tests generated on the original model are re-used on quantized versions to reveal decision logic inconsistencies; Definition 3 (Methodology, p. 5) defines a quantization erroneous behavior oracle comparing F and F′."
+}
+```

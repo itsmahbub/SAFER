@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "DeepTest’s test generation is driven by maximizing neuron coverage—an untargeted exploration objective—and its oracle flags any significant deviation in steering predictions between an original and transformed image, rather than steering the search toward a predefined attacker‐chosen fault or specific unsafe behavior. The exploration is therefore untargeted with respect to any particular failure class or target output, fitting the ‘Low’ category.",
+  "evidence": "Page 306, Section 3.1: “DeepTest tries to generate inputs that maximize neuron coverage of the test DNN.”; Page 307, Section 3.4: the oracle flags outputs where “(ˆθ_i – θ_t_i)² > λ MSE_orig,” i.e. any large prediction inconsistency rather than a specific attacker‐defined goal."
+}
+```

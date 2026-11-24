@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "DeepEvolution applies metamorphic transformations directly to image pixel values (e.g., brightness, contrast, rotation, scaling) in their native 0–255 space, rather than in a normalized or latent space. However, the paper does not describe any explicit enforcement of serialization‐format constraints—such as clipping mutated pixel values back into the integer 0–255 range or rounding floating‐point results—nor does it mention generating inputs in a serialized file format (e.g., PNG/JPEG). Thus, while mutations occur on raw input values, there is no guarantee that small, fault‐inducing perturbations will survive format serialization, matching the “Medium” definition.",
+  "evidence": "Page 2, Section IV.A: “First, we gather a list of parametric image-based transformations … Pixel-value transformations: change image contrast, image brightness, image blur, image sharpness and random perturbations within a limited interval. Affine transformations: image translation, image scaling, image shearing, and image rotation.”; Page 3, Section IV.C: “These metaheuristics algorithms … involving high dimensional bounded real-valued vectors without any prior search space discretization.” (No mention of clipping/rounding to integer pixel ranges or producing serialized image files.)"
+}
+```

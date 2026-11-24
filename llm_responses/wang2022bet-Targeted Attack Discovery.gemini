@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The paper's method, BET, uses a \"Tunable Objective Function\" to steer its exploration. For Single-model Testing (ST), this function is explicitly designed to maximize the confidence score for a specific target label, `li`, chosen from the set of all possible labels. The paper states that the user can prioritize which labels to target to support \"ad-hoc testing cases.\" It provides a clear example of a targeted attack goal: prioritizing the search for inputs that cause an ordinary employee's face to be misclassified as a manager. This directly aligns with the metric's definition for 'High' fulfillment, which involves steering exploration toward inducing a classifier to predict a specific target label.",
+  "evidence": "Page 6, Section 3.3, Tunable Objective Function: \"Tunable objective function for ST. Given an input x and the test model C, the tunable objective function for ST is given in Equation 6. SOF(x) = C(x)[li], (6) where li is the same as in Equation 5. In Equation 6, we only optimize C(x)[li]...\"\nPage 6, Section 3.3, Tunable Objective Function: \"We also allow users to prioritize labels as they want to support ad-hoc testing cases. For example, given a face recognition model deployed in a company, it is more risky if an ordinary employee is misclassified as a manager rather than another ordinary employee. Thus, users may prioritize finding error-inducing inputs that would be misclassified as managers.\""
+}
+```

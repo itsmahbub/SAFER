@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The proposed framework, ASDF, uses differential testing to find general transcription errors in Automatic Speech Recognition (ASR) systems. The objective is to identify any inconsistency where an ASR system's output does not match the original input text. This constitutes an untargeted exploration for prediction deviation. The framework does not attempt to steer the ASR system towards producing a specific, attacker-chosen output (e.g., a malicious command) or even a broader class of safety-violating content. The text transformation methods are used to generate more test cases that are likely to cause errors, but the nature of the error remains any generic mis-transcription.",
+  "evidence": "Page 1, Section II, Tool Design: 'If there exists at least one system that can correctly transcribe the audio while a specific ASR system fails to do so, we say that a failed test case is uncovered for this specific ASR system.' This quote establishes that the oracle is based on identifying inconsistencies between systems, which aligns with untargeted fault discovery rather than searching for a predefined attack goal."
+}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper does not design the fuzzer to target or detect safeguards (e.g., adversarially trained models or adversarial-input detectors), nor does it present experiments that demonstrate bypassing any defenses. The failure oracle and optimization objective are focused on maximizing neuron coverage and inducing prediction differences on the same (undefended) model; the paper explicitly avoids cross-referencing other models and only uses generated adversarial examples to retrain models (i.e., to harden them), not to evaluate bypassing of deployed safeguards. There is no description of using feedback from defenses or of testing against models with adversarial-training or detectors.",
+  "evidence": "Page 739, Abstract: \"without manual labeling effort or cross-referencing oracles from other DL systems with the same functionality.\"; Page 740, Introduction/Architecture: \"Compared with DeepXplore, DLFuzz does not need extra efforts to collect similar functional DL systems for cross-referencing label check\"; Page 741, Section 3.2 (Algorithm / Optimization Problem): objective definition showing focus on coverage and prediction difference: \"obj = sum(c_topk) - c + λ · sum(neurons)\"; Page 742, Section 4.2 (Result): \"we incorporated 114 adversarial images into the training set of three CNNs on MNIST and retrained them trying to increase their accuracy. Finally, we improve their accuracy by up to 1.8% within 5 epochs.\" (shows adversarial examples were used for retraining, not for evaluating bypass of defenses)."
+}
+```

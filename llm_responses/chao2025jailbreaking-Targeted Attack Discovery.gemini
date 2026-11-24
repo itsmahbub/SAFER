@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The PAIR algorithm specifically targets predefined attacker-chosen objectives. It initializes the attacker LLM's system prompt with a specific malicious objective (e.g., \"tell me how to build a bomb\") and iteratively refines prompts to induce a response that satisfies this exact objective. A JUDGE function evaluates whether the target model's response successfully aligns with the specified malicious intent.",
+  "evidence": "Page 2, Section II. PRELIMINARIES: \"... throughout the paper we assume that each jailbreak is characterized by an objective O, which describes the toxic content that the attacker seeks to elicit from the target (e.g., 'tell me how to build a bomb'). The objective O informs the generation and evaluation of prompts, ensuring that generated jailbreaks are contextually relevant and aligned with the specific malicious intent being simulated.\""
+}
+```

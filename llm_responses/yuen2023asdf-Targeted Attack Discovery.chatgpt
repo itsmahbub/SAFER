@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "ASDF performs untargeted differential testing that seeks inputs which produce transcription mismatches (failures) across ASR systems and expands the test suite via text transformations and phonetic analysis. The framework's oracle and exploration are defined by detecting any incorrect transcription (cross-referencing with other ASRs) and by generating more potentially-failing inputs (e.g., tense changes, homophone substitutions). There is no description in the paper of steering exploration toward attacker-chosen, specific target outputs or enforcing predefined adversary goals; instead the objective is to find mismatches/failures generally.",
+  "evidence": "Page 1, Abstract: \"ASDF generates more high-quality test cases by applying various text transformation methods (e.g., changing tense) to the input text in a failed test case.\"; Page 2, Section II (Tool Design): \"If there exists at least one system that can correctly transcribe the audio while a specific ASR system fails to do so, we say that a failed test case is uncovered for this specific ASR system.\"; Page 2, Section IV (Usage / Core Functionalities): \"A failed text is defined as an audio file that is incorrectly transcribed by at least one ASR system.\"; Page 2, Section III (Core Functionalities): \"The Homophone Transformation method first identifies the homophone of the error-inducing term of the failed test case... This new sentence will be used as the new test case.\""
+}
+```

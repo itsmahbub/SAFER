@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The method, MDPFuzz, steers its exploration toward finding broad classes of safety-violating behaviors, which the paper defines as 'crashes'. These crashes are predefined categories of failure, such as vehicle collisions, aircraft collisions, or a bipedal agent falling down. The goal is to induce any state that fits this class of failure, rather than a specific, attacker-chosen target output (which would be 'High') or an arbitrary prediction inconsistency (which would be 'Low'). The paper explicitly argues against using inconsistency as an oracle, instead focusing on these concrete, severe abnormal states.",
+  "evidence": "Page 9, Section 6, 'Testing Oracles (Crash Definition)': 'For RL and IL models in CARLA, we examine whether the model-controlled vehicle collides with other vehicles or buildings. For DNN-based ACAS Xu, we check collisions of the DNN-controlled airplane with other airplanes. For Coop Navi, we check collisions between MARL-controlled agents. For BipedalWalker, we check whether the RL-controlled walking agent falls (i.e., its head touches the ground).'"
+}
+```

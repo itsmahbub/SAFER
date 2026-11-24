@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The method generates test inputs by using a Text-To-Speech (TTS) system to synthesize audio files from text. This process inherently creates inputs directly in a standard, serialized audio format. The properties of the audio that might cause a failure in the Automatic Speech Recognition (ASR) system are embedded in the generated waveform itself. There is no intermediate, continuous representation (like a normalized tensor or frequency-domain data) that is mutated and then serialized, thus avoiding the risk of fault-inducing perturbations being lost due to format constraints like clipping or rounding during a save-to-disk operation. This approach directly aligns with the 'High' value criterion of generating inputs directly in a serialized format.",
+  "evidence": "Page 2, Section II-A, 'CrossASR++': 'Specifically, given a piece of text from the corpus, it first employs a TTS system to synthesize an audio file from the text. The generated audio file is then fed to all ASR systems inside CrossASR++...'\nPage 3, Section III-B, 'Experimental Settings': 'In our experiments, we choose the same TTS system and 5 ASR systems used to evaluate CrossASR++ in [2]. The TTS system is ResponsiveVoice 2.'"
+}
+```

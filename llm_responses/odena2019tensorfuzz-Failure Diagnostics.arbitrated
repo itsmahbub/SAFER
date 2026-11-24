@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "While TensorFuzz goes beyond merely listing failing inputs by inspecting model‐internal signals (e.g. extreme logit values causing NaNs and high‐magnitude discriminator outputs causing saturating gradients), it stops short of linking these failures to deeper underlying model vulnerabilities like dataset biases, spurious feature reliance, or overfitting. The paper provides partial diagnostic insight—characterizing failure patterns in terms of internal activations—but does not trace them back to root‐cause weaknesses in model training or representations, which would be required for a “High” rating.",
+  "evidence": "Page 7, Section 6: “Inspecting the classifier … we see that the NaN surfaces because there was one logit with a very positive value and one logit with a very negative value, which broke the loss calculation.”; Page 8, Section 6: “The input was one in which the output of the discriminator had too high a magnitude, which caused the incorrectly implemented loss function to have saturating gradients.”"
+}
+```

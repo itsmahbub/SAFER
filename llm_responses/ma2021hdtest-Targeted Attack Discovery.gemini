@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper describes HDTest as a differential fuzz testing approach. The primary goal is to generate inputs that cause a different prediction compared to the original, unmutated input. This is explicitly an untargeted approach focused on finding prediction inconsistencies. The success condition for finding an adversarial example is simply that the new prediction is not equal to the original prediction, without any constraint on what the new prediction should be. The guidance mechanism, while steering the search, aims to maximize the distance from the original predicted class's hypervector, not to steer it towards a specific, predefined target class. This aligns with the definition of untargeted exploration where the objective is prediction deviation.",
+  "evidence": "Page 3, Section IV. HDTEST FRAMEWORK: \"HDTest then applies mutation algorithms on the original input t to generate new input t'. Both the generated input and the original input are then sent to the HDC classifier for prediction. We then check if the two predicted labels are different, and if yes, this indicates a successful generation of an adversarial input.\"\n\nPage 3, Algorithm 1 HDTest Mutation Algorithm: The condition for a successful adversarial generation is `if y' in y_seeds! = y then` (Line 8), which only checks if the new prediction (`y'`) is different from the original prediction (`y`), not if it matches a specific target."
+}
+```

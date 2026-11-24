@@ -1,0 +1,7 @@
+```json
+{
+  "value": "High",
+  "why": "The method generates mutated inputs directly in the target serialized format, which for Large Language Models is text. The paper describes five mutation operators (Generate, Crossover, Expand, Shorten, Rephrase) that all leverage an auxiliary LLM to create new text-based jailbreak templates. Since the output of the mutation process is a text string, there is no intermediate continuous representation (e.g., embeddings) that would require conversion, clipping, or rounding. This design ensures that any generated prompt that triggers a failure is inherently stable and reproducible, as the problem of perturbations being lost during serialization does not apply. The generated text can be saved, reloaded, and used to reliably reproduce the identified jailbreak.",
+  "evidence": "Page 7, Section 3.3 Mutation: \"To address this challenge, we introduce distinct mutation methods that leverage LLMs themselves to assist in the mutation process. LLMs, with their proficiency in understanding and generating human-like text, offer a promising approach for crafting coherent and contextually relevant mutations.\" The descriptions of the five mutation operators on the same page further confirm this, e.g., for 'Generate': \"This mutation operator employs an LLM by providing it with a template and instructing the model to generate a new template in a similar style but with different content.\""
+}
+```

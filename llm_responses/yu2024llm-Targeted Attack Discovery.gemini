@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "The fuzzer aims to discover jailbreak prompts that elicit broadly harmful responses from LLMs. It steers its exploration by using a fine-tuned RoBERTa model as an oracle, which evaluates whether the output contains general \"harmful content\" rather than verifying if the response satisfies a highly specific, predefined attacker objective.",
+  "evidence": "Page 5, Section 3.1 Technical Overview and Challenges: \"The oracle is responsible for identifying whether a response contains harmful content. If the oracle identifies a response as harmful, LLM-FUZZER retains the template and adds it back to the seed pool.\"\n\nPage 8, Section 3.4 Oracle: \"To achieve a balance between cost and accuracy, we developed our own oracle for assessing the harmfulness of responses in our work. We began by using a substantial corpus of responses to unethical questions, meticulously annotating them with labels denoting their harmfulness or non-harmful nature. Subsequently, we harnessed these annotated responses to fine-tune a RoBERTa model [35]. In the context of our research, this RoBERTa model serves as our designated 'oracle'.\""
+}
+```

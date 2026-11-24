@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Low",
+  "why": "The paper's method, evolutionary differential testing, is designed to find general transcription failures in Automatic Speech Recognition (ASR) systems and then use these failures to improve the models via fine-tuning. The paper does not mention, describe, or target any safeguards (such as adversarial training or input detectors) in the ASR systems under test. The failure oracle is based on comparing outputs between different ASR systems, not on circumventing a specific defensive mechanism. Since the systems are not described as having safeguards and the testing objective is not to bypass them, the paper does not demonstrate a safeguard bypass.",
+  "evidence": "Page 3, Section III.B, \"Experimental Settings\": The paper lists the ASR systems used: \"The 5 ASR systems are DeepSpeech, DeepSpeech2, Wav2Letter++, Wav2Vec2, and Wit\". The paper provides no description of these systems having any safeguards. \nPage 2, Section II.A, \"CrossASR++\": The failure detection mechanism is described as standard differential testing: \"If the SUT transcription is different from the input text, it means that CrossASR++ uncovers a failed test case for the SUT.\" This process does not involve interacting with or trying to bypass any protective layers. The overall goal is to improve model performance, not to test security robustness."
+}
+```

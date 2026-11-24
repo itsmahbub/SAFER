@@ -1,0 +1,7 @@
+```json
+{
+  "value": "Medium",
+  "why": "While PAPILLON thoroughly characterizes the properties of successful jailbreak prompts (e.g., correlations with prompt length, semantic coherence, perplexity, mutation strategies, judge strictness, and transferability), it stops short of tracing these failures back to specific internal vulnerabilities of the victim models (such as reliance on spurious features, biased training data, or overfitting). The paper provides clear empirical insight into what kinds of inputs induce failures but does not perform diagnostic analysis linking these inputs to underlying model weaknesses.",
+  "evidence": "Page 10, Section 4.2: reports how low-perplexity, semantically coherent prompts bypass defenses; Page 11, Section 5.3: shows correlations between mutator types/prompt length and success rate; Page 13, Section 6.1: discusses why low-perplexity inputs evade perplexity-based filters. Nowhere do the authors analyze model internals or connect failures to specific vulnerabilities in training data or feature reliance."
+}
+```
